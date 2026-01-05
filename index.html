@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>WorkBike Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MENU -->
+<header>
+  <div class="logo">🚲 WorkBike Store</div>
+  <nav>
+    <ul>
+      <li><a href="#featured-ad">Promoção</a></li>
+      <li><a href="#bikes-section">Bicicletas</a></li>
+      <li><a href="#footer">Contato</a></li>
+    </ul>
+  </nav>
+  <button id="cart-btn">🛒 Carrinho (<span id="cart-count">0</span>)</button>
+</header>
+
+<!-- BANNER PRINCIPAL -->
+<section id="featured-ad" class="banner">
+  <div class="banner-content">
+    <h2>Kit Bicicleta Motorizada 50CC com Freios V-Brake</h2>
+    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_XXXXXX-MLB50000000000_052022-F.jpg" alt="Kit 50CC">
+    <p>Transforme sua bike com esse incrível kit motorizado de <strong>50CC</strong>!</p>
+    <p class="price">R$ 1.799,00</p>
+    <a href="https://www.mercadolivre.com.br/kit-bicicleta-motorizada-80cc-com-freios-vbrake-preta/up/MLBU2919717525" target="_blank">
+      Comprar no Mercado Livre
+    </a>
+  </div>
+</section>
+
+<!-- SEÇÃO DE BIKES -->
+<section id="bikes-section">
+  <h2>Bicicletas</h2>
+  <div class="filters">
+    <button onclick="filterCategory('all')">Todas</button>
+    <button onclick="filterCategory('mountain')">Mountain</button>
+    <button onclick="filterCategory('road')">Road</button>
+    <button onclick="filterCategory('urban')">Urban</button>
+    <button onclick="filterCategory('kids')">Kids</button>
+  </div>
+  <div id="bike-list"></div>
+</section>
+
+<!-- MODAL DE DETALHES -->
+<div id="detail-modal" class="modal">
+  <div class="modal-content">
+    <span id="close-detail" class="close">&times;</span>
+    <h2 id="detail-name"></h2>
+    <img id="detail-img" src="" alt="">
+    <p id="detail-desc"></p>
+    <ul id="detail-specs"></ul>
+    <p class="price" id="detail-price"></p>
+    <button id="detail-add">Adicionar ao carrinho</button>
+  </div>
+</div>
+
+<!-- MODAL DO CARRINHO -->
+<div id="cart-modal" class="modal">
+  <div class="modal-content">
+    <h2>Carrinho</h2>
+    <div id="cart-items"></div>
+    <h3>Total: R$ <span id="cart-total">0</span></h3>
+    <button onclick="closeCart()">Fechar</button>
+  </div>
+</div>
+
+<!-- RODAPÉ -->
+<footer id="footer">
+  <p>© 2026 WorkBike Store - Todos os direitos reservados</p>
+  <p>Contato: contato@workbike.com</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
