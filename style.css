@@ -1,0 +1,43 @@
+/* RESET */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: Arial, sans-serif; background: #f2f2f2; color: #333; }
+
+/* MENU */
+header { background: #111; color:white; display:flex; justify-content:space-between; align-items:center; padding:15px 20px; position:sticky; top:0; z-index:100; }
+header .logo { font-size:24px; font-weight:bold; }
+header nav ul { display:flex; list-style:none; }
+header nav ul li { margin:0 10px; }
+header nav ul li a { color:white; text-decoration:none; }
+#cart-btn { background:#27ae60; border:none; color:white; padding:8px 12px; border-radius:5px; cursor:pointer; }
+
+/* BANNER */
+.banner { background:#ffeedd; padding:40px 20px; text-align:center; }
+.banner img { max-width:400px; margin:10px 0; }
+.banner .price { font-size:24px; color:#e74c3c; font-weight:bold; }
+.banner a { display:inline-block; margin-top:10px; padding:12px 25px; background:#e74c3c; color:white; text-decoration:none; border-radius:5px; }
+
+/* FILTROS */
+.filters { text-align:center; margin:20px 0; }
+.filters button { margin:0 5px; padding:8px 12px; cursor:pointer; border:none; border-radius:5px; background:#27ae60; color:white; }
+
+/* BIKES */
+#bike-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; padding:0 20px 40px 20px; }
+.card { background:white; padding:15px; border-radius:8px; text-align:center; }
+.card img { width:100%; border-radius:6px; }
+.card h3 { margin:10px 0; }
+.card .price { font-size:20px; color:#27ae60; font-weight:bold; margin:10px 0; }
+.card button { cursor:pointer; padding:8px 12px; border:none; background:#27ae60; color:white; border-radius:5px; margin:5px; }
+
+/* MODAL */
+.modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:1000; }
+.modal-content { background:white; max-width:500px; margin:80px auto; padding:20px; border-radius:8px; position:relative; }
+.close { position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer; }
+
+/* DETALHES */
+#detail-specs { list-style:none; margin:10px 0; }
+
+/* RODAPÉ */
+footer { text-align:center; padding:20px; background:#111; color:white; margin-top:40px; }
+
+/* RESPONSIVO */
+@media(max-width:600px){ header nav ul{flex-direction:column;} #bike-list{grid-template-columns:1fr;} }
